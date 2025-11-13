@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PLATINADO GLOBAL</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     body {
-      background-color: #000000;
+      background-color: #000;
       background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-      background-repeat: repeat;
-      background-size: auto;
     }
 
+    /* Ocultar barra de rolagem horizontal */
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-    .media-card video { border-radius: 0.75rem; }
+    /* Dourado personalizado */
+    .text-gold { color: #d7a64a; }
+    .border-gold { border-color: #d7a64a; }
+    .bg-gold { background-color: #d7a64a; }
+    .from-gold { --tw-gradient-from: #d7a64a; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(215 166 74 / 0)); }
+    .via-gold { --tw-gradient-stops: var(--tw-gradient-from), #e1c464, var(--tw-gradient-to, rgb(225 196 100 / 0)); }
+    .to-gold { --tw-gradient-to: #b58743; }
+
     .text-5x1 { font-size: 1.25rem; }
+
+    video { border-radius: 0.75rem; }
   </style>
 </head>
 
 <body class="flex flex-col items-center justify-start min-h-screen text-center p-4 pt-12">
 
-  <!-- TÍTULO PRINCIPAL -->
-  <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+  <!-- TÍTULO -->
+  <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gold via-gold to-gold text-transparent bg-clip-text">
     PLATINADO GLOBAL
   </h1>
 
@@ -32,7 +41,7 @@
     Aprenda o método LDC para alcançar a cor desejada, deixando os cabelos saudáveis, com brilho e movimento.
   </p>
 
-  <!-- VÍDEO -->
+  <!-- VÍDEO PRINCIPAL -->
   <div class="mt-8 w-full flex justify-center">
     <iframe class="w-full max-w-2xl aspect-video rounded-xl shadow-lg"
       src="https://www.youtube.com/embed/eqjfvOmXtZE"
@@ -45,12 +54,12 @@
 
   <!-- BOTÃO -->
   <a href="#"
-    class="mt-8 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-yellow-400 text-yellow-400 bg-black rounded-full transition duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105">
+    class="mt-8 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-gold text-gold bg-black rounded-full transition duration-300 hover:scale-105">
     SIM! QUERO COMEÇAR!
   </a>
 
   <!-- SETAS -->
-  <div class="mt-10 flex flex-col items-center space-y-[1px] text-yellow-400 animate-[bounce_1.5s_infinite]">
+  <div class="mt-10 flex flex-col items-center space-y-[1px] text-gold animate-[bounce_1.5s_infinite]">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-8 h-8">
       <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
@@ -61,7 +70,7 @@
 
   <!-- CURSO -->
   <div class="mt-16 max-w-4xl flex flex-col items-center text-center">
-    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gold via-gold to-gold text-transparent bg-clip-text">
       Curso Exclusivo de Platinado para Barbeiros
     </h1>
 
@@ -80,15 +89,15 @@
     </p>
 
     <a href="#"
-      class="mt-8 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-yellow-400 text-yellow-400 bg-black rounded-full transition duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105">
+      class="mt-8 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-gold text-gold bg-black rounded-full transition duration-300 hover:scale-105">
       COMPRAR O CURSO!
     </a>
   </div>
 
-  <!-- SOBRE LEONARDO PINHEIRO -->
+  <!-- SOBRE O LEO -->
   <div class="mt-20 max-w-6xl w-full flex flex-col md:flex-row items-center justify-between text-center md:text-left">
     <div class="md:w-1/2 px-4">
-      <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+      <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gold via-gold to-gold text-transparent bg-clip-text">
         Sobre Leo Do Corte
       </h1>
       <p class="mt-6 text-lg text-white leading-relaxed">
@@ -107,9 +116,9 @@
     </div>
   </div>
 
-  <!-- RESULTADOS REAIS (CARROSSEL) -->
+  <!-- RESULTADOS REAIS -->
   <div class="mt-24 max-w-6xl w-full flex flex-col items-center text-center px-4">
-    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gold via-gold to-gold text-transparent bg-clip-text">
       Resultados Reais do Método LDC
     </h1>
 
@@ -130,16 +139,14 @@
         <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC9.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
       </div>
 
-      <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/60 text-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-black transition z-10">‹</button>
-      <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/60 text-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-black transition z-10">›</button>
+      <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/60 text-gold p-2 rounded-full hover:bg-gold hover:text-black transition z-10">‹</button>
+      <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/60 text-gold p-2 rounded-full hover:bg-gold hover:text-black transition z-10">›</button>
     </div>
-
-    <a href="#" class="mt-10 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-yellow-400 text-yellow-400 bg-black rounded-full transition duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105">APRENDER RESULTADO!</a>
   </div>
 
   <!-- ALUNOS FORMADOS -->
   <div class="mt-24 max-w-6xl w-full flex flex-col items-center text-center">
-    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gold via-gold to-gold text-transparent bg-clip-text">
       Confira alguns dos barbeiros formados pelo Leo do Corte
     </h1>
 
@@ -165,34 +172,34 @@
 
   <!-- FEEDBACK -->
   <div class="mt-24 max-w-6xl w-full flex flex-col items-center text-center">
-    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gold via-gold to-gold text-transparent bg-clip-text">
       Veja o que meus alunos estão dizendo!
     </h1>
 
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-      <div class="bg-neutral-900 border border-yellow-500/30 rounded-2xl p-6 shadow-lg hover:shadow-yellow-500/20 transition transform hover:scale-105">
-        <div class="flex justify-center mb-4 text-yellow-400"><span>★★★★★</span></div>
+      <div class="bg-neutral-900 border border-gold/30 rounded-2xl p-6 shadow-lg hover:shadow-[0_0_20px_rgba(215,166,74,0.3)] transition transform hover:scale-105">
+        <div class="flex justify-center mb-4 text-gold"><span>★★★★★</span></div>
         <p class="text-white italic leading-relaxed">"O curso mudou completamente minha visão sobre o platinado. Agora meus clientes elogiam o brilho e a saúde do cabelo!"</p>
-        <p class="mt-4 text-yellow-300 font-semibold">Lucas Andrade — RJ</p>
+        <p class="mt-4 text-[#e1c464] font-semibold">Lucas Andrade — RJ</p>
       </div>
 
-      <div class="bg-neutral-900 border border-yellow-500/30 rounded-2xl p-6 shadow-lg hover:shadow-yellow-500/20 transition transform hover:scale-105">
-        <div class="flex justify-center mb-4 text-yellow-400"><span>★★★★★</span></div>
+      <div class="bg-neutral-900 border border-gold/30 rounded-2xl p-6 shadow-lg hover:shadow-[0_0_20px_rgba(215,166,74,0.3)] transition transform hover:scale-105">
+        <div class="flex justify-center mb-4 text-gold"><span>★★★★★</span></div>
         <p class="text-white italic leading-relaxed">"Aprendi o método LDC e já estou aplicando na barbearia. Meus resultados melhoraram demais e o faturamento também!"</p>
-        <p class="mt-4 text-yellow-300 font-semibold">Diego Souza — SP</p>
+        <p class="mt-4 text-[#e1c464] font-semibold">Diego Souza — SP</p>
       </div>
 
-      <div class="bg-neutral-900 border border-yellow-500/30 rounded-2xl p-6 shadow-lg hover:shadow-yellow-500/20 transition transform hover:scale-105">
-        <div class="flex justify-center mb-4 text-yellow-400"><span>★★★★★</span></div>
+      <div class="bg-neutral-900 border border-gold/30 rounded-2xl p-6 shadow-lg hover:shadow-[0_0_20px_rgba(215,166,74,0.3)] transition transform hover:scale-105">
+        <div class="flex justify-center mb-4 text-gold"><span>★★★★★</span></div>
         <p class="text-white italic leading-relaxed">"O Leo do Corte ensina de forma simples e direta. Depois do curso, consegui conquistar novos clientes e aumentar meu reconhecimento."</p>
-        <p class="mt-4 text-yellow-300 font-semibold">Marcos Lima — MG</p>
+        <p class="mt-4 text-[#e1c464] font-semibold">Marcos Lima — MG</p>
       </div>
     </div>
   </div>
 
   <!-- SEÇÃO FINAL -->
   <div class="mt-24 mb-16 text-center px-6">
-    <h2 class="text-2xl md:text-4xl font-extrabold text-yellow-400 animate-pulse flex flex-wrap justify-center items-center gap-2">
+    <h2 class="text-2xl md:text-4xl font-extrabold text-gold animate-pulse flex flex-wrap justify-center items-center gap-2">
       <span class="hidden md:inline">🚨</span>
       <span>NÃO PERCA ESTA OPORTUNIDADE!</span>
       <span class="hidden md:inline">🚨</span>
@@ -200,18 +207,14 @@
 
     <p class="mt-6 text-lg md:text-xl text-white">
       De <span class="line-through text-gray-400">R$250,00</span> por apenas
-      <span class="text-yellow-400 font-bold text-3xl">R$49,99</span>
+      <span class="text-gold font-bold text-3xl">R$49,99</span>
     </p>
 
     <a href="#"
-      class="mt-8 inline-block px-8 py-4 text-5x1 font-semibold border-2 border-yellow-400 text-yellow-400 bg-black rounded-full transition duration-300 hover:bg-yellow-400 hover:text-black hover:scale-110 shadow-lg">
+      class="mt-8 inline-block px-8 py-4 text-5x1 font-semibold border-2 border-gold text-gold bg-black rounded-full transition duration-300 hover:scale-110 shadow-lg">
       FAZER INSCRIÇÃO!
     </a>
   </div>
-
-  <footer class="mt-16 py-8 text-center text-gray-400 text-sm border-t border-yellow-500/30 w-full">
-    <p>Copyright Ⓒ 2025 - Todos os direitos reservados.</p>
-  </footer>
 
   <!-- WHATSAPP -->
   <a href="https://wa.me/5521965674401?text=Tenho%20interesse%20em%20comprar%20seu%20curso!" target="_blank"
@@ -219,76 +222,51 @@
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-14 h-14 p-2">
   </a>
 
-  <!-- SCRIPT DO CARROSSEL -->
+  <!-- SCRIPT CARROSSEL -->
   <script>
-    (function () {
-      const carousel = document.getElementById('carousel');
-      const nextBtn = document.getElementById('next');
-      const prevBtn = document.getElementById('prev');
-      const videos = carousel.querySelectorAll('video');
-      let index = 0;
-      let auto = null;
+    const carousel = document.getElementById("carousel");
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+    const videos = carousel.querySelectorAll("video");
 
-      const visibleItems = () => (window.innerWidth < 768 ? 1 : 3);
-      const totalItems = carousel.children.length;
-      const maxIndex = () => Math.max(0, totalItems - visibleItems());
+    let index = 0;
+    const slides = carousel.children.length;
 
-      function updateTransform() {
-        if (index > maxIndex()) index = 0;
-        if (index < 0) index = maxIndex();
-        const translate = -(index * (100 / visibleItems()));
-        carousel.style.transform = `translateX(${translate}%)`;
-      }
+    function updateCarousel() {
+      const isMobile = window.innerWidth < 768;
+      const visibleSlides = isMobile ? 1 : 3;
+      const offset = (index * 100) / visibleSlides;
+      carousel.style.transform = `translateX(-${offset}%)`;
+    }
 
-      function goNext() {
-        index++;
-        updateTransform();
-        pauseAllVideos();
-      }
+    function nextSlide() {
+      const isMobile = window.innerWidth < 768;
+      const visibleSlides = isMobile ? 1 : 3;
+      if (index < slides - visibleSlides) index++;
+      else index = 0;
+      updateCarousel();
+    }
 
-      function goPrev() {
-        index--;
-        updateTransform();
-        pauseAllVideos();
-      }
+    function prevSlide() {
+      const isMobile = window.innerWidth < 768;
+      const visibleSlides = isMobile ? 1 : 3;
+      if (index > 0) index--;
+      else index = slides - visibleSlides;
+      updateCarousel();
+    }
 
-      function pauseAllVideos() {
-        videos.forEach(v => v.pause());
-      }
+    next.addEventListener("click", nextSlide);
+    prev.addEventListener("click", prevSlide);
 
-      function startAuto() {
-        if (!auto) auto = setInterval(goNext, 5000);
-      }
+    let autoSlide = setInterval(nextSlide, 4000);
 
-      function stopAuto() {
-        if (auto) {
-          clearInterval(auto);
-          auto = null;
-        }
-      }
+    videos.forEach(video => {
+      video.addEventListener("play", () => clearInterval(autoSlide));
+      video.addEventListener("pause", () => autoSlide = setInterval(nextSlide, 4000));
+      video.addEventListener("ended", () => autoSlide = setInterval(nextSlide, 4000));
+    });
 
-      nextBtn.addEventListener('click', goNext);
-      prevBtn.addEventListener('click', goPrev);
-
-      window.addEventListener('resize', updateTransform);
-
-      carousel.addEventListener('mouseenter', stopAuto);
-      carousel.addEventListener('mouseleave', () => {
-        // Só reinicia se nenhum vídeo estiver tocando
-        const playing = Array.from(videos).some(v => !v.paused);
-        if (!playing) startAuto();
-      });
-
-      videos.forEach(v => {
-        v.addEventListener('play', stopAuto);
-        v.addEventListener('pause', startAuto);
-        v.addEventListener('ended', startAuto);
-      });
-
-      updateTransform();
-      startAuto();
-    })();
+    window.addEventListener("resize", updateCarousel);
   </script>
-
 </body>
 </html>
