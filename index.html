@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PLATINADO GLOBAL</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -12,6 +12,12 @@
       background-repeat: repeat;
       background-size: auto;
     }
+
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .media-card video { border-radius: 0.75rem; }
+    .text-5x1 { font-size: 1.25rem; }
   </style>
 </head>
 
@@ -92,7 +98,7 @@
         <br><br>
         Criei meu próprio método, com o qual já capacitei diversos barbeiros que hoje se destacam no mercado.
         <br><br>
-        Sou proprietário da barbearia Two Golden Brothers, localizada no bairro Maracanã, no Rio de Janeiro, e formado como instrutor pela escola Cristiano Tondorem.
+        Sou proprietário da barbearia Two Golden Brothers, localizada no bairro Maracanã, no Rio de Janeiro, e formado como instrutor pela escola Cristiano Tonsorem.
       </p>
     </div>
 
@@ -101,69 +107,34 @@
     </div>
   </div>
 
- <!-- RESULTADOS REAIS -->
-<div class="mt-24 max-w-6xl w-full flex flex-col items-center text-center">
-  <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
-    Resultados Reais do Método LDC
-  </h1>
-
-  <p class="mt-6 text-lg text-white max-w-3xl">
-    Veja alguns dos platinados realizados por mim com o método LDC. Fios claros, saudáveis e com brilho intenso!
-  </p>
-
-  <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-    <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-      <img src="imgs/CorteLDC1.jpeg" alt="Resultado de platinado 1"
-        class="w-full h-80 object-cover transform transition duration-300 group-hover:scale-105">
-    </div>
-
-    <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-      <video
-        controls
-        poster="imgs/CorteLDC3-poster.jpeg"
-        class="w-full h-80 object-cover rounded-2xl">
-        <source src="imgs/CorteLDC3.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-    </div>
-
-    <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-      <img src="imgs/CorteLDC2.jpeg" alt="Resultado de platinado 2"
-        class="w-full h-80 object-cover transform transition duration-300 group-hover:scale-105">
-    </div>
-  </div>
-
-  <a href="#"
-    class="mt-10 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-yellow-400 text-yellow-400 bg-black rounded-full transition duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105">
-    APRENDER ESSE RESULTADO!
-  </a>
-</div>
-
-
-  <!-- ALUNOS FORMADOS (AJUSTADO) -->
-  <div class="mt-24 max-w-6xl w-full flex flex-col items-center text-center">
+  <!-- RESULTADOS REAIS (CARROSSEL) -->
+  <div class="mt-24 max-w-6xl w-full flex flex-col items-center text-center px-4">
     <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 text-transparent bg-clip-text">
-      Confira alguns dos barbeiros formados pelo Leo do Corte
+      Resultados Reais do Método LDC
     </h1>
 
-    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-      <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-        <img src="imgs/LDC1.jpeg" alt="Aluno formado 1"
-          class="w-full h-[90vh] sm:h-[28rem] md:h-80 object-cover transform transition duration-300 group-hover:scale-105 rounded-2xl">
+    <p class="mt-6 text-lg text-white max-w-3xl">
+      Veja alguns dos platinados realizados por mim com o método LDC. Fios claros, saudáveis e com brilho intenso!
+    </p>
+
+    <div class="relative w-full mt-8 overflow-hidden">
+      <div id="carousel" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC1.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC2.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><video controls poster="imgs/CorteLDC3-poster.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"><source src="imgs/CorteLDC3.mp4" type="video/mp4"></video></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC4.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC5.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC6.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><video controls poster="imgs/CorteLDC7-poster.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"><source src="imgs/CorteLDC7.mp4" type="video/mp4"></video></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC8.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
+        <div class="min-w-full md:min-w-[33.3333%] p-2"><img src="imgs/CorteLDC9.jpeg" class="w-full h-80 object-cover rounded-2xl shadow-lg"></div>
       </div>
-      <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-        <img src="imgs/LDC4.jpeg" alt="Aluno formado 2"
-          class="w-full h-[90vh] sm:h-[28rem] md:h-80 object-cover transform transition duration-300 group-hover:scale-105 rounded-2xl">
-      </div>
-      <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-        <img src="imgs/LDC3.jpeg" alt="Aluno formado 3"
-          class="w-full h-[90vh] sm:h-[28rem] md:h-80 object-cover transform transition duration-300 group-hover:scale-105 rounded-2xl">
-      </div>
-      <div class="relative group rounded-2xl overflow-hidden shadow-lg">
-        <img src="imgs/LDC2.jpeg" alt="Aluno formado 4"
-          class="w-full h-[90vh] sm:h-[28rem] md:h-80 object-cover transform transition duration-300 group-hover:scale-105 rounded-2xl">
-      </div>
+
+      <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/60 text-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-black transition z-10">‹</button>
+      <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/60 text-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-black transition z-10">›</button>
     </div>
+
+    <a href="#" class="mt-10 inline-block px-8 py-3 text-5x1 font-semibold border-2 border-yellow-400 text-yellow-400 bg-black rounded-full transition duration-300 hover:bg-yellow-400 hover:text-black hover:scale-105">APRENDER RESULTADO!</a>
   </div>
 
   <!-- FEEDBACK -->
@@ -174,32 +145,20 @@
 
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
       <div class="bg-neutral-900 border border-yellow-500/30 rounded-2xl p-6 shadow-lg hover:shadow-yellow-500/20 transition transform hover:scale-105">
-        <div class="flex justify-center mb-4 text-yellow-400">
-          <span>★★★★★</span>
-        </div>
-        <p class="text-white italic leading-relaxed">
-          "O curso mudou completamente minha visão sobre o platinado. Agora meus clientes elogiam o brilho e a saúde do cabelo!"
-        </p>
+        <div class="flex justify-center mb-4 text-yellow-400"><span>★★★★★</span></div>
+        <p class="text-white italic leading-relaxed">"O curso mudou completamente minha visão sobre o platinado. Agora meus clientes elogiam o brilho e a saúde do cabelo!"</p>
         <p class="mt-4 text-yellow-300 font-semibold">Lucas Andrade — RJ</p>
       </div>
 
       <div class="bg-neutral-900 border border-yellow-500/30 rounded-2xl p-6 shadow-lg hover:shadow-yellow-500/20 transition transform hover:scale-105">
-        <div class="flex justify-center mb-4 text-yellow-400">
-          <span>★★★★★</span>
-        </div>
-        <p class="text-white italic leading-relaxed">
-          "Aprendi o método LDC e já estou aplicando na barbearia. Meus resultados melhoraram demais e o faturamento também!"
-        </p>
+        <div class="flex justify-center mb-4 text-yellow-400"><span>★★★★★</span></div>
+        <p class="text-white italic leading-relaxed">"Aprendi o método LDC e já estou aplicando na barbearia. Meus resultados melhoraram demais e o faturamento também!"</p>
         <p class="mt-4 text-yellow-300 font-semibold">Diego Souza — SP</p>
       </div>
 
       <div class="bg-neutral-900 border border-yellow-500/30 rounded-2xl p-6 shadow-lg hover:shadow-yellow-500/20 transition transform hover:scale-105">
-        <div class="flex justify-center mb-4 text-yellow-400">
-          <span>★★★★★</span>
-        </div>
-        <p class="text-white italic leading-relaxed">
-          "O Leo do Corte ensina de forma simples e direta. Depois do curso, consegui conquistar novos clientes e aumentar meu reconhecimento."
-        </p>
+        <div class="flex justify-center mb-4 text-yellow-400"><span>★★★★★</span></div>
+        <p class="text-white italic leading-relaxed">"O Leo do Corte ensina de forma simples e direta. Depois do curso, consegui conquistar novos clientes e aumentar meu reconhecimento."</p>
         <p class="mt-4 text-yellow-300 font-semibold">Marcos Lima — MG</p>
       </div>
     </div>
@@ -228,11 +187,82 @@
     <p>Copyright Ⓒ 2025 - Todos os direitos reservados.</p>
   </footer>
 
+  <!-- WHATSAPP -->
   <a href="https://wa.me/5521965674401?text=Tenho%20interesse%20em%20comprar%20seu%20curso!" target="_blank"
      class="fixed bottom-6 right-6 bg-green-500 rounded-full shadow-lg hover:scale-110 transition transform">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
-         class="w-14 h-14 p-2">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-14 h-14 p-2">
   </a>
+
+  <!-- SCRIPT DO CARROSSEL -->
+  <script>
+    (function () {
+      const carousel = document.getElementById('carousel');
+      const nextBtn = document.getElementById('next');
+      const prevBtn = document.getElementById('prev');
+      const videos = carousel.querySelectorAll('video');
+      let index = 0;
+      let auto = null;
+
+      const visibleItems = () => (window.innerWidth < 768 ? 1 : 3);
+      const totalItems = carousel.children.length;
+      const maxIndex = () => Math.max(0, totalItems - visibleItems());
+
+      function updateTransform() {
+        if (index > maxIndex()) index = 0;
+        if (index < 0) index = maxIndex();
+        const translate = -(index * (100 / visibleItems()));
+        carousel.style.transform = `translateX(${translate}%)`;
+      }
+
+      function goNext() {
+        index++;
+        updateTransform();
+        pauseAllVideos();
+      }
+
+      function goPrev() {
+        index--;
+        updateTransform();
+        pauseAllVideos();
+      }
+
+      function pauseAllVideos() {
+        videos.forEach(v => v.pause());
+      }
+
+      function startAuto() {
+        if (!auto) auto = setInterval(goNext, 5000);
+      }
+
+      function stopAuto() {
+        if (auto) {
+          clearInterval(auto);
+          auto = null;
+        }
+      }
+
+      nextBtn.addEventListener('click', goNext);
+      prevBtn.addEventListener('click', goPrev);
+
+      window.addEventListener('resize', updateTransform);
+
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', () => {
+        // Só reinicia se nenhum vídeo estiver tocando
+        const playing = Array.from(videos).some(v => !v.paused);
+        if (!playing) startAuto();
+      });
+
+      videos.forEach(v => {
+        v.addEventListener('play', stopAuto);
+        v.addEventListener('pause', startAuto);
+        v.addEventListener('ended', startAuto);
+      });
+
+      updateTransform();
+      startAuto();
+    })();
+  </script>
 
 </body>
 </html>
