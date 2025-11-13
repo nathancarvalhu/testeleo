@@ -258,12 +258,12 @@
     next.addEventListener("click", nextSlide);
     prev.addEventListener("click", prevSlide);
 
-    let autoSlide = setInterval(nextSlide, 4000);
+    let autoSlide = setInterval(nextSlide, 15000);
 
     videos.forEach(video => {
       video.addEventListener("play", () => clearInterval(autoSlide));
-      video.addEventListener("pause", () => autoSlide = setInterval(nextSlide, 4000));
-      video.addEventListener("ended", () => autoSlide = setInterval(nextSlide, 4000));
+      video.addEventListener("pause", () => autoSlide = setInterval(nextSlide, 15000));
+      video.addEventListener("ended", () => autoSlide = setInterval(nextSlide, 15000));
     });
 
     window.addEventListener("resize", updateCarousel);
